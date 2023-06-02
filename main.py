@@ -20,11 +20,11 @@ def index():
 
             if len(frequency) > 0:
                 most_frequent_word = max(frequency, key=frequency.get)
-                return render_template('result.html', word=most_frequent_word, frequency=frequency[most_frequent_word])
+                return render_template('laba3v3res.html', word=most_frequent_word, frequency=frequency[most_frequent_word])
             else:
                 return 'No words were found in the file.'
     else:
-        return render_template('index.html')
+        return render_template('laba3v3.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
